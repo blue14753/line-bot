@@ -1,3 +1,5 @@
+import random
+
 from flask import Flask, request, abort
 
 from linebot import (
@@ -28,7 +30,12 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text='Hello')
+    breakfast_list = ['美式早午餐','樂活堡','麥味登','萊客堡','萊姆斯','摩斯漢堡']
+    lunch_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
+    dinner_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
+    drink_list = ['夏克緹','立橙','清心','ifresh','花茶大師']
+    random = random.randint(0,len(breakfast_list))
+    message = TextSendMessage(text=breakfast_list[random])
     line_bot_api.reply_message(event.reply_token,message)
 	#line_bot_api.reply_message(
 		#event.reply_token,
