@@ -50,6 +50,9 @@ def handle_message(event):
     elif '飲料' in event.message.text:
         ran = random.randint(0,len(drink_list)-1)
         message = TextSendMessage(text=drink_list[ran])
+    elif '推薦' in event.message.text and '早餐' in event.message.text:
+        breakfast_list.add(event.message.text)
+        message = TextSendMessage('感謝大大分享')
     else:
         message = TextSendMessage(text='搜尋地區美食請輸入: [地區](早.午.晚.宵夜)餐')
     
