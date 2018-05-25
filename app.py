@@ -37,7 +37,7 @@ def callback():
 def handle_message(event):
     
     if '推薦' in event.message.text and '早餐' in event.message.text:
-        breakfast_list.add(event.message.text)
+        breakfast_list.append(event.message.text)
         message = TextSendMessage('感謝大大分享')
     elif '早餐' in event.message.text:
         ran = random.randint(0,len(breakfast_list)-1)
