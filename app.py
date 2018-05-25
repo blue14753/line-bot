@@ -48,7 +48,7 @@ def handle_message(event):
             ran = random.randint(0,len(drink_list))
             message = TextSendMessage(text=drink_list[ran])
     
-	line_bot_api.reply_message(event.reply_token,message)
+    line_bot_api.reply_message(event.reply_token,message)
         
 if __name__ == "__main__":
 	app.run()
