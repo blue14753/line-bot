@@ -34,6 +34,7 @@ def handle_message(event):
     lunch_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
     dinner_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
     drink_list = ['夏克緹','立橙','清心','ifresh','花茶大師']
+    line_bot_api.push_message(event.push_token, "push")
     ran = random.randint(0,len(breakfast_list))
     message = TextSendMessage(text=breakfast_list[ran])
     line_bot_api.reply_message(event.reply_token,message)
