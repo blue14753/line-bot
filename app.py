@@ -36,17 +36,19 @@ def handle_message(event):
     drink_list = ['夏克緹','立橙','清心','ifresh','花茶大師']
     
     if '早餐' in event.message.text:
-            ran = random.randint(0,len(breakfast_list))
-            message = TextSendMessage(text=breakfast_list[ran])
+        ran = random.randint(0,len(breakfast_list))
+        message = TextSendMessage(text=breakfast_list[ran])
     elif '午餐' in event.message.text:
-            ran = random.randint(0,len(lunch_list))
-            message = TextSendMessage(text=lunch_list[ran])
+        ran = random.randint(0,len(lunch_list))
+        message = TextSendMessage(text=lunch_list[ran])
     elif '晚餐' in event.message.text:
-            ran = random.randint(0,len(dinner_list))
-            message = TextSendMessage(text=dinner_list[ran])
+        ran = random.randint(0,len(dinner_list))
+        message = TextSendMessage(text=dinner_list[ran])
     elif '飲料' in event.message.text:
-            ran = random.randint(0,len(drink_list))
-            message = TextSendMessage(text=drink_list[ran])
+        ran = random.randint(0,len(drink_list))
+        message = TextSendMessage(text=drink_list[ran])
+    else:
+        message = TextSendMessage(text='搜尋地區美食請輸入: [地區](早.午.晚.宵夜)餐')
     
     line_bot_api.reply_message(event.reply_token,message)
         
