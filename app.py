@@ -54,7 +54,7 @@ def handle_message(event):
         ran = random.randint(0,len(drink_list)-1)
         message = TextSendMessage(text=drink_list[ran])
     else:
-        message = TextSendMessage(text='搜尋地區美食請輸入: [地區](早.午.晚.宵夜)餐')
+        message = TextSendMessage(text='搜尋美食請輸入: (早餐、午餐、晚餐、飲料) \n 推薦美食請輸入:')
     
     line_bot_api.reply_message(event.reply_token,message)
         
