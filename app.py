@@ -17,6 +17,11 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('G4WumVD0m/ro9kCBsWl2/68YzTgzLrS5tMQDIe02gHhwJ62eqy/BN9EUKX8F4V6RmcySsnZPxl+/QzikfXQwg2iH+AC25wheupPotxQ8m+u3N+Srz0lfYVwJ1xMh8kA1wm9Pavra0QYNoGc7VDh6yAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('d83d5a73c4ac43b5f6dd5a09d4c7c39f')
 
+breakfast_list = ['美式早午餐','樂活堡','麥味登','萊客堡','萊姆斯','摩斯漢堡']
+lunch_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
+dinner_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
+drink_list = ['夏克緹','立橙','清心','ifresh','花茶大師']
+
 @app.route("/callback", methods=['POST'])
 def callback():
 	signature = request.headers['X-Line-Signature']
@@ -30,10 +35,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    breakfast_list = ['美式早午餐','樂活堡','麥味登','萊客堡','萊姆斯','摩斯漢堡']
-    lunch_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
-    dinner_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
-    drink_list = ['夏克緹','立橙','清心','ifresh','花茶大師']
+    
     
     if '早餐' in event.message.text:
         ran = random.randint(0,len(breakfast_list))
