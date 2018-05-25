@@ -66,6 +66,8 @@ def handle_message(event):
     elif '我覺得' in event.message.text:
         command_list.append(event.message.text.split('我覺得')[1])
         message = TextSendMessage(text='我也這樣覺得')
+    elif '偷偷看一下' in event.message.text:
+        message = TextSendMessage(text=str(command_list))
     else:
         msg = ('搜尋美食請輸入:早餐、午餐、晚餐、飲料\n' +
                '推薦美食請輸入:推薦(早餐、午餐、晚餐、飲料)\n' +
