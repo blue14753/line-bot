@@ -35,6 +35,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    global breakfast_list,lunch_list,dinner_list,drink_list
     
     if '推薦' in event.message.text and '早餐' in event.message.text:
         breakfast_list.append(event.message.text)
