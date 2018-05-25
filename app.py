@@ -67,8 +67,8 @@ def handle_message(event):
         command_list.append(event.message.text.split('我覺得')[1])
         message = TextSendMessage(text='我也這樣覺得')
     else:
-        msg = ('搜尋美食請輸入:早餐、午餐、晚餐、飲料\n',
-               '推薦美食請輸入:推薦(早餐、午餐、晚餐、飲料)\n',
+        msg = ('搜尋美食請輸入:早餐、午餐、晚餐、飲料\n' +
+               '推薦美食請輸入:推薦(早餐、午餐、晚餐、飲料)\n' +
                '有話要說請輸入:我覺得(想說的話)\n')
         message = TextSendMessage(text=msg)
     
