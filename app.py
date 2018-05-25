@@ -35,20 +35,20 @@ def handle_message(event):
     dinner_list = ['歐姆萊斯','白屋','紅油抄手','滿食記','田園美食屋']
     drink_list = ['夏克緹','立橙','清心','ifresh','花茶大師']
     
-    
-	line_bot_api.reply_message(
-		event.reply_token,
-        if '早餐' in event.message.text:
+    if '早餐' in event.message.text:
             ran = random.randint(0,len(breakfast_list))
             message = TextSendMessage(text=breakfast_list[ran])
-            line_bot_api.reply_message(event.reply_token,message)
-        elif '午餐' in event.message.text:
+    elif '午餐' in event.message.text:
             ran = random.randint(0,len(lunch_list))
             message = TextSendMessage(text=lunch_list[ran])
-            line_bot_api.reply_message(event.reply_token,message)
-        elif '晚餐' in event.message.text:
+    elif '晚餐' in event.message.text:
             ran = random.randint(0,len(dinner_list))
             message = TextSendMessage(text=dinner_list[ran])
-            line_bot_api.reply_message(event.reply_token,message)
+    elif '飲料' in event.message.text:
+            ran = random.randint(0,len(drink_list))
+            message = TextSendMessage(text=drink_list[ran])
+    
+	line_bot_api.reply_message(event.reply_token,message)
+        
 if __name__ == "__main__":
 	app.run()
