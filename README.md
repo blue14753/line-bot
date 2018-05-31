@@ -27,4 +27,4 @@
 
 Github:  https://github.com/blue14753/line-bot
 
-![image](https://imgur.com/inzkbyx)
+![image](https://github.com/blue14753/line-bot/blob/master/qrcode.JPG)
