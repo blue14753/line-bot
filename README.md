@@ -40,6 +40,12 @@ No:106522021
 
 ![image](https://github.com/blue14753/line-bot/blob/master/6.JPG)
 
+好友統計
+
+![image](https://github.com/blue14753/line-bot/blob/master/7.JPG)
+
+![image](https://github.com/blue14753/line-bot/blob/master/8.JPG)
+
 Github:  https://github.com/blue14753/line-bot
 
 ![image](https://github.com/blue14753/line-bot/blob/master/qrcode.JPG)
