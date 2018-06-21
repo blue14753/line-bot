@@ -42,9 +42,9 @@ No:106522021
 
 好友統計
 
-![image](https://github.com/blue14753/line-bot/blob/master/7.JPG)
+![image](https://github.com/blue14753/line-bot/blob/master/7.png)
 
-![image](https://github.com/blue14753/line-bot/blob/master/8.JPG)
+![image](https://github.com/blue14753/line-bot/blob/master/8.png)
 
 Github:  https://github.com/blue14753/line-bot
 
